@@ -1,0 +1,53 @@
+bitácora de Ingresos y Gastos
+
+grupo de personas
+
+control de las finanzas
+
+registro de Movimiento
+• Tipo de Movimiento (INGRESOS / GASTOS)
+• Categoría (Alimentación, Transporte, Servicio Básico, etc.)
+• Descripción Corta (Breve descripción del movimiento)
+• Notas (Campo opcional para observaciones adicionales)
+• Fecha del Movimiento
+• Valor del Movimiento
+
+Tipos de Movimientos
+• INGRESOS: Representa un movimiento a favor
+• GASTOS: Representa un movimiento negativo
+
+
+Resumen del Balance - Saldos por Categoría
+Resumen por Categorías
+
+registro y edición de los Movimientos
+
+
+*dato de sesión una de las personas disponibles
+Variable de sesión donde se almacena la persona/cuenta que administrara los registros
+	ok agregar campo de login a la tabla de transacciones
+	ok agregar una tabla de login
+	ok agregar una ventana inicial para que se ingrese el login sin password
+	ok agregar un label en cada pantalla que muestre el login en sesion
+	ok alado del label un boton salir para ir a la ventana inicial y cambiar de login
+	ok programar pantalla para que valide login y deje la variable en sesion
+	ok programar para filtrar movimientos y consultas según loguin
+
+
+página para el registro de movimientos. Para crear/editar
+	popup manejado por javascript
+	Grabar el Movimiento: 
+		Validar Fecha actual y no menor a 30 días
+		Valor del movimiento mayor a 0. 
+		Grabar y cerrar
+		Refrescar el Listado de Movimientos.
+
+Página para el resumen del Balance
+	resultados al cargar la página
+	detalle por categoría, ordenando de mayor a menor
+	
+
+
+
+                
+                <td><td><a class="btn btn-primary" href="@Url.Action("Edit", new { TransactionId = item.TransactionId })">Editar</a></td> </td>  

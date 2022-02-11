@@ -1,0 +1,42 @@
+﻿@model List<Rp3.Test.Mvc.Models.BalanceViewModel>
+@{
+    ViewBag.Title = "Balance";
+}
+
+<div class="jumbotron">
+    <h1>Balance</h1>
+    <p class="lead">Resumen por Categoría</p>    
+</div>
+
+<div class="row">    
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>          
+                <td>
+                    @item.Category
+                </td>
+                <td>
+                    @item.Amount
+                </td>
+            </tr>
+            }
+			<tr>
+                <th>Total</th>
+				@{ decimal runningTotal = 0M; } 
+				@foreach (var item in Model)
+				{
+					runningTotal += item.Amount;
+				}
+				<th>@runningTotal</th>
+			</tr>
+        </tbody>
+    </table>
+</div>

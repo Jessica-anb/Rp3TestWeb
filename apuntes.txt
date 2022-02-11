@@ -49,5 +49,5 @@ Página para el resumen del Balance
 
 
 
-                
-                <td><td><a class="btn btn-primary" href="@Url.Action("Edit", new { TransactionId = item.TransactionId })">Editar</a></td> </td>  
+       
+     
